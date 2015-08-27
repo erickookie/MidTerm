@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  GDCImageViewController.h
 //  MidTerm
 //
 //  Created by MCS on 8/26/15.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface GDCImageViewController : UIViewController
 
 @end
-

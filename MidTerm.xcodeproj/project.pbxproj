@@ -15,6 +15,9 @@
 		04C391841B8E9D3B006D2F50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C391831B8E9D3B006D2F50 /* Images.xcassets */; };
 		04C391871B8E9D3B006D2F50 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C391851B8E9D3B006D2F50 /* LaunchScreen.xib */; };
 		04C391931B8E9D3B006D2F50 /* MidTermTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391921B8E9D3B006D2F50 /* MidTermTests.m */; };
+		04C3919E1B8EA62A006D2F50 /* DrawLinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3919D1B8EA62A006D2F50 /* DrawLinesViewController.m */; };
+		04C391A11B8EA704006D2F50 /* NewFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391A01B8EA704006D2F50 /* NewFeedViewController.m */; };
+		04C391A41B8EA765006D2F50 /* GDCImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391A31B8EA765006D2F50 /* GDCImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,12 @@
 		04C3918C1B8E9D3B006D2F50 /* MidTermTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidTermTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C391911B8E9D3B006D2F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C391921B8E9D3B006D2F50 /* MidTermTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidTermTests.m; sourceTree = "<group>"; };
+		04C3919C1B8EA62A006D2F50 /* DrawLinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLinesViewController.h; sourceTree = "<group>"; };
+		04C3919D1B8EA62A006D2F50 /* DrawLinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLinesViewController.m; sourceTree = "<group>"; };
+		04C3919F1B8EA704006D2F50 /* NewFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFeedViewController.h; sourceTree = "<group>"; };
+		04C391A01B8EA704006D2F50 /* NewFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeedViewController.m; sourceTree = "<group>"; };
+		04C391A21B8EA765006D2F50 /* GDCImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDCImageViewController.h; sourceTree = "<group>"; };
+		04C391A31B8EA765006D2F50 /* GDCImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDCImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +92,14 @@
 		04C391721B8E9D3B006D2F50 /* MidTerm */ = {
 			isa = PBXGroup;
 			children = (
+				04C391A81B8EB97A006D2F50 /* XMLPARSON */,
+				04C391A71B8EB971006D2F50 /* Model Class */,
+				04C391A61B8EB967006D2F50 /* Connection */,
 				04C391771B8E9D3B006D2F50 /* AppDelegate.h */,
 				04C391781B8E9D3B006D2F50 /* AppDelegate.m */,
 				04C3917D1B8E9D3B006D2F50 /* ViewController.h */,
 				04C3917E1B8E9D3B006D2F50 /* ViewController.m */,
+				04C391A51B8EB943006D2F50 /* ViewControllers */,
 				04C391801B8E9D3B006D2F50 /* Main.storyboard */,
 				04C391831B8E9D3B006D2F50 /* Images.xcassets */,
 				04C391851B8E9D3B006D2F50 /* LaunchScreen.xib */,
@@ -120,6 +133,40 @@
 				04C391911B8E9D3B006D2F50 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04C391A51B8EB943006D2F50 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04C3919C1B8EA62A006D2F50 /* DrawLinesViewController.h */,
+				04C3919D1B8EA62A006D2F50 /* DrawLinesViewController.m */,
+				04C391A21B8EA765006D2F50 /* GDCImageViewController.h */,
+				04C391A31B8EA765006D2F50 /* GDCImageViewController.m */,
+				04C3919F1B8EA704006D2F50 /* NewFeedViewController.h */,
+				04C391A01B8EA704006D2F50 /* NewFeedViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04C391A61B8EB967006D2F50 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		04C391A71B8EB971006D2F50 /* Model Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Class";
+			sourceTree = "<group>";
+		};
+		04C391A81B8EB97A006D2F50 /* XMLPARSON */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = XMLPARSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C3917C1B8E9D3B006D2F50 /* MidTerm.xcdatamodeld in Sources */,
+				04C391A11B8EA704006D2F50 /* NewFeedViewController.m in Sources */,
+				04C391A41B8EA765006D2F50 /* GDCImageViewController.m in Sources */,
+				04C3919E1B8EA62A006D2F50 /* DrawLinesViewController.m in Sources */,
 				04C391791B8E9D3B006D2F50 /* AppDelegate.m in Sources */,
 				04C3917F1B8E9D3B006D2F50 /* ViewController.m in Sources */,
 				04C391761B8E9D3B006D2F50 /* main.m in Sources */,
