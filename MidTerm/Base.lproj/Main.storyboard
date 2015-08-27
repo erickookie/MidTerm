@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GDC Images from dev.fuzzproductions.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKJ-b4-6O6">
-                                <rect key="frame" x="134" y="72" width="333" height="40"/>
+                                <rect key="frame" x="16" y="72" width="333" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DOY-Y6-5CG"/>
+                    <navigationItem key="navigationItem" title="GDC" id="DOY-Y6-5CG" userLabel="GDC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ErN-t8-KH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News Feed from URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wE-3p-9uK">
-                                <rect key="frame" x="218" y="72" width="165" height="40"/>
+                                <rect key="frame" x="16" y="72" width="165" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -86,7 +86,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xl8-XF-flX"/>
+                    <navigationItem key="navigationItem" title="News Feed" id="xl8-XF-flX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="klm-9u-mhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Draw Lines Canvas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mom-sI-3or">
-                                <rect key="frame" x="226" y="72" width="148" height="40"/>
+                                <rect key="frame" x="16" y="72" width="148" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -130,7 +130,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="o8K-np-GhL"/>
+                    <navigationItem key="navigationItem" title="Draw Canvas" id="o8K-np-GhL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0W-LK-oFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,9 +147,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="ax5-ne-Ogt" kind="relationship" relationship="viewControllers" id="tUU-36-z0o"/>
                         <segue destination="tha-cf-5g2" kind="relationship" relationship="viewControllers" id="xt6-o5-oWD"/>
                         <segue destination="qOH-Ec-SgV" kind="relationship" relationship="viewControllers" id="sjH-ud-PQO"/>
-                        <segue destination="ax5-ne-Ogt" kind="relationship" relationship="viewControllers" id="tUU-36-z0o"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07s-Sp-hiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
