@@ -12,6 +12,14 @@
 #import "JSONParsing.h"
 #import "News.h"
 
-@interface NewFeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface NewFeedViewController : UIViewController 
+//@interface NewFeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    NSMutableArray * _allEntries;
+    NSOperationQueue * _queue;
+    NSArray * _feeds;
+}
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

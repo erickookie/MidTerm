@@ -78,15 +78,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News Feed from URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wE-3p-9uK">
-                                <rect key="frame" x="16" y="72" width="165" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Feed from URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wE-3p-9uK">
+                                <rect key="frame" x="16" y="64" width="164.5" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="J7D-Yu-4UQ">
-                                <rect key="frame" x="16" y="120" width="568" height="423"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="J7D-Yu-4UQ">
+                                <rect key="frame" x="16" y="128" width="568" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="423" id="RoU-hy-kA2"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="rF2-hX-rfz">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
@@ -105,11 +108,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="woT-Yy-RDb" firstAttribute="top" secondItem="J7D-Yu-4UQ" secondAttribute="bottom" id="8rQ-RI-gSb"/>
+                            <constraint firstItem="2wE-3p-9uK" firstAttribute="top" secondItem="vWf-JB-UU1" secondAttribute="bottom" id="VsZ-sj-vH9"/>
                             <constraint firstItem="J7D-Yu-4UQ" firstAttribute="leading" secondItem="v1U-op-XV0" secondAttribute="leadingMargin" id="idN-cs-7zc"/>
+                            <constraint firstItem="J7D-Yu-4UQ" firstAttribute="leading" secondItem="2wE-3p-9uK" secondAttribute="leading" id="lZx-fI-lKR"/>
                             <constraint firstItem="J7D-Yu-4UQ" firstAttribute="trailing" secondItem="v1U-op-XV0" secondAttribute="trailingMargin" id="msX-Sm-nNI"/>
+                            <constraint firstItem="J7D-Yu-4UQ" firstAttribute="top" secondItem="2wE-3p-9uK" secondAttribute="bottom" id="umH-dw-Xog"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="News Feed" id="xl8-XF-flX"/>
+                    <connections>
+                        <outlet property="tableView" destination="J7D-Yu-4UQ" id="AcQ-ty-sRa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="klm-9u-mhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
