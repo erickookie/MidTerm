@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Connection.h"
+#import "XMLParson.h"
+#import "JSONParsing.h"
+#import "News.h"
 
-@interface NewFeedViewController : UIViewController
+@interface NewFeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

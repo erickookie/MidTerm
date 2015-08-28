@@ -18,6 +18,12 @@
 		04C3919E1B8EA62A006D2F50 /* DrawLinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3919D1B8EA62A006D2F50 /* DrawLinesViewController.m */; };
 		04C391A11B8EA704006D2F50 /* NewFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391A01B8EA704006D2F50 /* NewFeedViewController.m */; };
 		04C391A41B8EA765006D2F50 /* GDCImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391A31B8EA765006D2F50 /* GDCImageViewController.m */; };
+		04E658001B8F60ED0037E92C /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E657FF1B8F60ED0037E92C /* Connection.m */; };
+		04E658031B8F71DB0037E92C /* XMLParson.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E658021B8F71DB0037E92C /* XMLParson.m */; };
+		04E658061B8F72D20037E92C /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E658051B8F72D20037E92C /* News.m */; };
+		04E658091B8FD9F20037E92C /* JSONParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E658081B8FD9F20037E92C /* JSONParsing.m */; };
+		04E6580C1B8FDF1A0037E92C /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6580B1B8FDF1A0037E92C /* Session.m */; };
+		04E6580E1B8FF9580037E92C /* RSSEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6580D1B8FF9580037E92C /* RSSEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,18 @@
 		04C391A01B8EA704006D2F50 /* NewFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeedViewController.m; sourceTree = "<group>"; };
 		04C391A21B8EA765006D2F50 /* GDCImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDCImageViewController.h; sourceTree = "<group>"; };
 		04C391A31B8EA765006D2F50 /* GDCImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDCImageViewController.m; sourceTree = "<group>"; };
+		04E657FE1B8F60880037E92C /* Connection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		04E657FF1B8F60ED0037E92C /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
+		04E658011B8F71950037E92C /* XMLParson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLParson.h; sourceTree = "<group>"; };
+		04E658021B8F71DB0037E92C /* XMLParson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParson.m; sourceTree = "<group>"; };
+		04E658041B8F72D20037E92C /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		04E658051B8F72D20037E92C /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		04E658071B8FD9E80037E92C /* JSONParsing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONParsing.h; sourceTree = "<group>"; };
+		04E658081B8FD9F20037E92C /* JSONParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParsing.m; sourceTree = "<group>"; };
+		04E6580A1B8FDEFC0037E92C /* Session.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		04E6580B1B8FDF1A0037E92C /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		04E6580D1B8FF9580037E92C /* RSSEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSEntry.m; sourceTree = "<group>"; };
+		04E6580F1B8FF9A60037E92C /* RSSEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSEntry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +110,9 @@
 		04C391721B8E9D3B006D2F50 /* MidTerm */ = {
 			isa = PBXGroup;
 			children = (
-				04C391A81B8EB97A006D2F50 /* XMLPARSON */,
-				04C391A71B8EB971006D2F50 /* Model Class */,
 				04C391A61B8EB967006D2F50 /* Connection */,
+				04C391A81B8EB97A006D2F50 /* Parsing */,
+				04C391A71B8EB971006D2F50 /* Model Class */,
 				04C391771B8E9D3B006D2F50 /* AppDelegate.h */,
 				04C391781B8E9D3B006D2F50 /* AppDelegate.m */,
 				04C3917D1B8E9D3B006D2F50 /* ViewController.h */,
@@ -151,6 +169,10 @@
 		04C391A61B8EB967006D2F50 /* Connection */ = {
 			isa = PBXGroup;
 			children = (
+				04E657FE1B8F60880037E92C /* Connection.h */,
+				04E657FF1B8F60ED0037E92C /* Connection.m */,
+				04E6580A1B8FDEFC0037E92C /* Session.h */,
+				04E6580B1B8FDF1A0037E92C /* Session.m */,
 			);
 			name = Connection;
 			sourceTree = "<group>";
@@ -158,15 +180,23 @@
 		04C391A71B8EB971006D2F50 /* Model Class */ = {
 			isa = PBXGroup;
 			children = (
+				04E658041B8F72D20037E92C /* News.h */,
+				04E658051B8F72D20037E92C /* News.m */,
+				04E6580F1B8FF9A60037E92C /* RSSEntry.h */,
+				04E6580D1B8FF9580037E92C /* RSSEntry.m */,
 			);
 			name = "Model Class";
 			sourceTree = "<group>";
 		};
-		04C391A81B8EB97A006D2F50 /* XMLPARSON */ = {
+		04C391A81B8EB97A006D2F50 /* Parsing */ = {
 			isa = PBXGroup;
 			children = (
+				04E658011B8F71950037E92C /* XMLParson.h */,
+				04E658021B8F71DB0037E92C /* XMLParson.m */,
+				04E658071B8FD9E80037E92C /* JSONParsing.h */,
+				04E658081B8FD9F20037E92C /* JSONParsing.m */,
 			);
-			name = XMLPARSON;
+			name = Parsing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,13 +299,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E658061B8F72D20037E92C /* News.m in Sources */,
+				04E6580E1B8FF9580037E92C /* RSSEntry.m in Sources */,
 				04C3917C1B8E9D3B006D2F50 /* MidTerm.xcdatamodeld in Sources */,
 				04C391A11B8EA704006D2F50 /* NewFeedViewController.m in Sources */,
 				04C391A41B8EA765006D2F50 /* GDCImageViewController.m in Sources */,
+				04E658091B8FD9F20037E92C /* JSONParsing.m in Sources */,
 				04C3919E1B8EA62A006D2F50 /* DrawLinesViewController.m in Sources */,
+				04E658031B8F71DB0037E92C /* XMLParson.m in Sources */,
 				04C391791B8E9D3B006D2F50 /* AppDelegate.m in Sources */,
+				04E6580C1B8FDF1A0037E92C /* Session.m in Sources */,
 				04C3917F1B8E9D3B006D2F50 /* ViewController.m in Sources */,
 				04C391761B8E9D3B006D2F50 /* main.m in Sources */,
+				04E658001B8F60ED0037E92C /* Connection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +506,7 @@
 				04C391981B8E9D3B006D2F50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04C391991B8E9D3B006D2F50 /* Build configuration list for PBXNativeTarget "MidTermTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +515,7 @@
 				04C3919B1B8E9D3B006D2F50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
