@@ -11,6 +11,7 @@
 #import "Connection.h"
 #import "JSONParsing.h"
 #import "XMLParson.h"
+#import "newsDetailViewController.h"
 
 @interface NewFeedViewController ()
 
@@ -25,6 +26,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     NSLog(@"This is the super viewDidLoad for the NewFeedViewController");
+    
+    self.newsArray = [[NSMutableArray alloc ]init];
     
     // NSURLConnection
     Connection * con = [[Connection alloc] init];
@@ -63,11 +66,25 @@
     for (News *news in resultArray)
     {
         NSLog(@"-------- New Item ----------- ");
-        NSLog(@"Title: %@", news.title);
-        NSLog(@"Description: %@", news.descriptionNew);
-        NSLog(@"urWebView: %@", news.urlWebView);
+//      NSLog(@"Title: %@", news.title);
+        NSString * TitleNew = news.title;
+//      NSLog(@"Description: %@", news.descriptionNew);
+        NSString * DescriptionNew = news.descriptionNew;
+//      NSLog(@"urWebView: %@", news.urlWebView);
+        NSString * urlNew = news.urlWebView;
+        
+                 News * newElement = [[News alloc]init];
+               newElement.TitleNew = TitleNew;
+        newElement.DescriptionsNew = DescriptionNew;
+                 newElement.urlNew = urlNew;
+        
+        NSLog(@"News Title -> %@", newElement.TitleNew);
+        //NSLog(@"Desc News  -> %@", newElement.DescriptionsNew);
+        NSLog(@"URL Link   -> %@", newElement.urlNew);
+        
+        [self.newsArray addObject:newElement];
     }
-    
+    [self.tableView reloadData];
 }
 
 //#pragma mark - JSONParsingDelegate
@@ -79,74 +96,51 @@
 //    NSLog(@"End of the Dictionary Parsing");
 //}
 
-//#pragma mark - TableView
-//
+
+#pragma mark - TableView
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
     NSLog(@"Return the Number of segment for the Cell for the table View");
     return 1;
 }
-//
+
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    NSLog(@"Table view return array count");
-//    NSLog(@"Array Size -> %lu", (unsigned long)[self.allEntries count]);
-//    return [self.allEntries count];
-    return 0;
+    NSLog(@"Table view return array count");
+    NSLog(@"Array Size -> %lu", (unsigned long)[self.newsArray count]);
+    return [self.newsArray count];
 }
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *CellIdentifier = @"Cell";
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil)
-//    {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] ;
-//    }
-//    
-//    RSSEntry *entry = [_allEntries objectAtIndex:indexPath.row];
-//    
-//    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init] ;
-//    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-//    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-//    NSString *articleDateString = [dateFormatter stringFromDate:entry.articleDate];
-//    
-//    cell.textLabel.text = entry.articleTitle;
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", articleDateString, entry.blogTitle];
-//    
-//    return cell;
-//}
-//
-//- (void)refresh
-//{
-//    for (NSString *feed in _feeds)
-//    {
-//        NSURL *url = [NSURL URLWithString:feed];
-////        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-//        [request setDelegate:self];
-//        [_queue addOperation:request];
-//    }
-//}
 
-//- (void)requestFinished:(ASIHTTPRequest *)request
-//{
-//    
-//    RSSEntry *entry = [[RSSEntry alloc] initWithBlogTitle:request.url.absoluteString
-//                                              articleTitle:request.url.absoluteString
-//                                                articleUrl:request.url.absoluteString
-//                                               articleDate:[NSDate date]];
-//    int insertIdx = 0;
-//    [_allEntries insertObject:entry atIndex:insertIdx];
-//    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:insertIdx inSection:0]]
-//                          withRowAnimation:UITableViewRowAnimationRight];
-//    
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * simpleTableIdentifier = @"Cell";
+    News * NewsRow = (News *)[self.newsArray objectAtIndex:indexPath.row];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",NewsRow.TitleNew,NewsRow.DescriptionsNew];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",NewsRow.TitleNew];
+    return cell;
+}
 
-//- (void)requestFailed:(ASIHTTPRequest *)request
-//{
-//    NSError *error = [request error];
-//    NSLog(@"Error: %@", error);
-//}
+#pragma mark - Prepare for segue method
+//This method prepares the data for the next view controller
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"This is the method for the News Detailed");
+    
+    if ([segue.identifier isEqualToString:@"ShowNewsSegue"])
+    {
+        NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
+        News* element=[self.newsArray objectAtIndex:indexPath.row];
+        newsDetailViewController * newsDetailViewController = segue.destinationViewController;
+        newsDetailViewController.newsInformation=element;
+        NSLog(@"Current Song -> %@",element.TitleNew );
+    }
+}
 
 @end

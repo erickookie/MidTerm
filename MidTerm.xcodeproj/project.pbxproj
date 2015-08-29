@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044EDB671B90B2B800D8B6C0 /* newsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044EDB661B90B2B800D8B6C0 /* newsDetailViewController.m */; };
+		044EDB6E1B911D6C00D8B6C0 /* NewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044EDB6D1B911D6C00D8B6C0 /* NewsWebViewController.m */; };
 		04C391761B8E9D3B006D2F50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391751B8E9D3B006D2F50 /* main.m */; };
 		04C391791B8E9D3B006D2F50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391781B8E9D3B006D2F50 /* AppDelegate.m */; };
 		04C3917C1B8E9D3B006D2F50 /* MidTerm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C3917A1B8E9D3B006D2F50 /* MidTerm.xcdatamodeld */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044EDB651B90B2AC00D8B6C0 /* newsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = newsDetailViewController.h; sourceTree = "<group>"; };
+		044EDB661B90B2B800D8B6C0 /* newsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsDetailViewController.m; sourceTree = "<group>"; };
+		044EDB6C1B911D5A00D8B6C0 /* NewsWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsWebViewController.h; sourceTree = "<group>"; };
+		044EDB6D1B911D6C00D8B6C0 /* NewsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsWebViewController.m; sourceTree = "<group>"; };
 		04C391701B8E9D3B006D2F50 /* MidTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C391741B8E9D3B006D2F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C391751B8E9D3B006D2F50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +92,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044EDB621B90B25700D8B6C0 /* News Feed scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04C3919F1B8EA704006D2F50 /* NewFeedViewController.h */,
+				04C391A01B8EA704006D2F50 /* NewFeedViewController.m */,
+				044EDB651B90B2AC00D8B6C0 /* newsDetailViewController.h */,
+				044EDB661B90B2B800D8B6C0 /* newsDetailViewController.m */,
+				044EDB6C1B911D5A00D8B6C0 /* NewsWebViewController.h */,
+				044EDB6D1B911D6C00D8B6C0 /* NewsWebViewController.m */,
+			);
+			name = "News Feed scenes";
+			sourceTree = "<group>";
+		};
+		044EDB631B90B27700D8B6C0 /* GDC Image scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04C391A21B8EA765006D2F50 /* GDCImageViewController.h */,
+				04C391A31B8EA765006D2F50 /* GDCImageViewController.m */,
+			);
+			name = "GDC Image scenes";
+			sourceTree = "<group>";
+		};
+		044EDB641B90B28100D8B6C0 /* Draw Lines Canvas scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04C3919C1B8EA62A006D2F50 /* DrawLinesViewController.h */,
+				04C3919D1B8EA62A006D2F50 /* DrawLinesViewController.m */,
+			);
+			name = "Draw Lines Canvas scenes";
+			sourceTree = "<group>";
+		};
 		04C391671B8E9D3B006D2F50 = {
 			isa = PBXGroup;
 			children = (
@@ -153,12 +190,9 @@
 		04C391A51B8EB943006D2F50 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				04C3919C1B8EA62A006D2F50 /* DrawLinesViewController.h */,
-				04C3919D1B8EA62A006D2F50 /* DrawLinesViewController.m */,
-				04C391A21B8EA765006D2F50 /* GDCImageViewController.h */,
-				04C391A31B8EA765006D2F50 /* GDCImageViewController.m */,
-				04C3919F1B8EA704006D2F50 /* NewFeedViewController.h */,
-				04C391A01B8EA704006D2F50 /* NewFeedViewController.m */,
+				044EDB641B90B28100D8B6C0 /* Draw Lines Canvas scenes */,
+				044EDB631B90B27700D8B6C0 /* GDC Image scenes */,
+				044EDB621B90B25700D8B6C0 /* News Feed scenes */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -300,11 +334,13 @@
 				04C391A41B8EA765006D2F50 /* GDCImageViewController.m in Sources */,
 				04E658091B8FD9F20037E92C /* JSONParsing.m in Sources */,
 				04C3919E1B8EA62A006D2F50 /* DrawLinesViewController.m in Sources */,
+				044EDB671B90B2B800D8B6C0 /* newsDetailViewController.m in Sources */,
 				04E658031B8F71DB0037E92C /* XMLParson.m in Sources */,
 				04C391791B8E9D3B006D2F50 /* AppDelegate.m in Sources */,
 				04E6580C1B8FDF1A0037E92C /* Session.m in Sources */,
 				04C3917F1B8E9D3B006D2F50 /* ViewController.m in Sources */,
 				04C391761B8E9D3B006D2F50 /* main.m in Sources */,
+				044EDB6E1B911D6C00D8B6C0 /* NewsWebViewController.m in Sources */,
 				04E658001B8F60ED0037E92C /* Connection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
