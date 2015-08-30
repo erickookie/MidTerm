@@ -19,4 +19,6 @@
 
 @property(strong,nonatomic) NSMutableArray * newsArray;
 
+@property (strong, nonatomic) NSMutableArray * SelectFromDBArray;
+
 @end

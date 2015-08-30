@@ -42,6 +42,9 @@
     
     [db selectQuery:@"Hello select"];
     
+//    self.SelectFromDBArray = [db selectQuery:@"Hello select"];
+    
+    
 //    [db deleteQuery:@"Hello delete"];
 
 }

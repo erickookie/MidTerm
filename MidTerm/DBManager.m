@@ -120,7 +120,6 @@
         if ( sqlite3_prepare_v2(sqlite3DB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
         {
             NSLog(@"SQL_OK -> %d", (sqlite3_prepare_v2(sqlite3DB, query_stmt, -1, &statement, NULL)));
-            
             NSLog(@"Statement -> %d", sqlite3_step(statement));
             
             //If this worked, we must have a row if the data was there
@@ -130,36 +129,37 @@
                     do
                     {
                         //Prepare the SQL columns text to retrive the id
-                        NSString * idField = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)];
-                        NSLog(@"%@", idField);
+                        NSString * idField = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement,0)];
+                        NSLog(@"id = %@", idField);
                 
                         //Parse the SQL column text to retrive the Name
-                        NSString * NameField = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)];
+                        NSString * NameField = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement,1)];
                         NSLog(@"%@", NameField );
                 
                         //Parse the SQL column text to retrive the Description
-                        NSString * DescriptionField = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 2)];
+                        NSString * DescriptionField = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement,2)];
                         NSLog(@"%@", DescriptionField );
                 
                         //Parse the SQL column text to retrive the URL LINK
-                        NSString * URLLinkField = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement, 3)];
+                        NSString * URLLinkField = [[NSString alloc]initWithUTF8String:(const char *) sqlite3_column_text(statement,3)];
                         NSLog(@"%@", URLLinkField );
                 
                         NSLog( @"*** Match Found ***");
+                        
                     }
                     while (sqlite3_step(statement)==SQLITE_ROW);
-            }
-//            else
-//            {
-//                // If we dont have a row - the data is not found
-//                NSLog( @" Math not found" );
-////                self.addressTextField.text = @"";
-////                self.phoneTextField.text   = @"";
+                    
+                }
+//                else
+//                {
+//                    // If we dont have a row - the data is not found
+//                    NSLog( @" Math not found" );
+////                  self.addressTextField.text = @"";
+////                  self.phoneTextField.text   = @"";
 //                
-//            }
+//                }
         }
     }
-    
 }
 
 - (void) deleteQuery : (NSString *) StringQuery;

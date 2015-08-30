@@ -23,6 +23,8 @@
 }
 @property (nonatomic, strong) NSString * databasePath;
 
+@property (nonatomic, strong) NSMutableArray * selectQueryArray;
+
 - (void) connectionDB;
 - (void) insertQuery : (NSString *) StringQuery;;
 - (void) selectQuery : (NSString *) StringQuery;;
