@@ -12,6 +12,7 @@
 #import "JSONParsing.h"
 #import "XMLParson.h"
 #import "newsDetailViewController.h"
+#import "DBManager.h"
 
 @interface NewFeedViewController ()
 
@@ -33,6 +34,15 @@
     Connection * con = [[Connection alloc] init];
     con.delegate = self;
     [con downloadFile];
+    
+    DBManager * db = [[DBManager alloc]init];
+    [db connectionDB];
+    
+//    [db insertQuery:@"Hello Insert"];
+    
+    [db selectQuery:@"Hello select"];
+    
+//    [db deleteQuery:@"Hello delete"];
 
 }
 
@@ -44,7 +54,7 @@
 
 -(void)connection:(Connection *)connection didFinishWithResultData:(NSData *)xmlData
 {
-    NSLog(@"Entering the XMLParsing and JSONParsing");
+//    NSLog(@"Entering the XMLParsing and JSONParsing");
     
     // XML Parsing
     XMLParsing * xmlParsing = [[XMLParsing alloc] initWithXMLData:xmlData];
@@ -62,10 +72,10 @@
 
 -(void)XMLParsing:(XMLParsing *)xmlParsing didFinishParsingWithResult:(NSArray *)resultArray
 {
-    NSLog(@"Set the XML to the resultArray");
+//    NSLog(@"Set the XML to the resultArray");
     for (News *news in resultArray)
     {
-        NSLog(@"-------- New Item ----------- ");
+//        NSLog(@"-------- New Item ----------- ");
 //      NSLog(@"Title: %@", news.title);
         NSString * TitleNew = news.title;
 //      NSLog(@"Description: %@", news.descriptionNew);
@@ -78,9 +88,9 @@
         newElement.DescriptionsNew = DescriptionNew;
                  newElement.urlNew = urlNew;
         
-        NSLog(@"News Title -> %@", newElement.TitleNew);
+//        NSLog(@"News Title -> %@", newElement.TitleNew);
         //NSLog(@"Desc News  -> %@", newElement.DescriptionsNew);
-        NSLog(@"URL Link   -> %@", newElement.urlNew);
+//        NSLog(@"URL Link   -> %@", newElement.urlNew);
         
         [self.newsArray addObject:newElement];
     }
@@ -100,14 +110,14 @@
 #pragma mark - TableView
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSLog(@"Return the Number of segment for the Cell for the table View");
+//    NSLog(@"Return the Number of segment for the Cell for the table View");
     return 1;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Table view return array count");
-    NSLog(@"Array Size -> %lu", (unsigned long)[self.newsArray count]);
+//    NSLog(@"Table view return array count");
+//    NSLog(@"Array Size -> %lu", (unsigned long)[self.newsArray count]);
     return [self.newsArray count];
 }
 
@@ -131,7 +141,7 @@
 //This method prepares the data for the next view controller
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"This is the method for the News Detailed");
+//    NSLog(@"This is the method for the News Detailed");
     
     if ([segue.identifier isEqualToString:@"ShowNewsSegue"])
     {
@@ -139,7 +149,7 @@
         News* element=[self.newsArray objectAtIndex:indexPath.row];
         newsDetailViewController * newsDetailViewController = segue.destinationViewController;
         newsDetailViewController.newsInformation=element;
-        NSLog(@"Current Song -> %@",element.TitleNew );
+//        NSLog(@"Current New -> %@",element.TitleNew );
     }
 }
 

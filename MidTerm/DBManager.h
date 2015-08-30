@@ -7,18 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "sqlite3.h"
 
-@class DBManager
+@class DBManager;
 
 @protocol DBManagerDelegate <NSObject>
 
 @end
 
 @interface DBManager : NSObject
+//Private Variables here
+{
+//    sqlite3 * contactDB;
+    sqlite3 * sqlite3DB;
+}
+@property (nonatomic, strong) NSString * databasePath;
 
 - (void) connectionDB;
-- (void) insertQuery;
-- (void) selectQuery;
-- (void) deleteQuery;
+- (void) insertQuery : (NSString *) StringQuery;;
+- (void) selectQuery : (NSString *) StringQuery;;
+- (void) deleteQuery : (NSString *) StringQuery;;
 
 @end

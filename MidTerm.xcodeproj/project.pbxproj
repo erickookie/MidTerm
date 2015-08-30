@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		040B96251B9293C200F5C9BC /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B96241B9293C200F5C9BC /* DBManager.m */; };
+		040B96281B92A0D200F5C9BC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B96261B92A0D200F5C9BC /* libsqlite3.0.dylib */; };
+		040B96291B92A0D200F5C9BC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B96271B92A0D200F5C9BC /* libsqlite3.dylib */; };
 		044EDB671B90B2B800D8B6C0 /* newsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044EDB661B90B2B800D8B6C0 /* newsDetailViewController.m */; };
 		044EDB6E1B911D6C00D8B6C0 /* NewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044EDB6D1B911D6C00D8B6C0 /* NewsWebViewController.m */; };
 		04C391761B8E9D3B006D2F50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391751B8E9D3B006D2F50 /* main.m */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		040B96231B9293B200F5C9BC /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		040B96241B9293C200F5C9BC /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		040B96261B92A0D200F5C9BC /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		040B96271B92A0D200F5C9BC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		044EDB651B90B2AC00D8B6C0 /* newsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = newsDetailViewController.h; sourceTree = "<group>"; };
 		044EDB661B90B2B800D8B6C0 /* newsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsDetailViewController.m; sourceTree = "<group>"; };
 		044EDB6C1B911D5A00D8B6C0 /* NewsWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsWebViewController.h; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040B96281B92A0D200F5C9BC /* libsqlite3.0.dylib in Frameworks */,
+				040B96291B92A0D200F5C9BC /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +147,8 @@
 				04C391721B8E9D3B006D2F50 /* MidTerm */,
 				04C3918F1B8E9D3B006D2F50 /* MidTermTests */,
 				04C391711B8E9D3B006D2F50 /* Products */,
+				040B96261B92A0D200F5C9BC /* libsqlite3.0.dylib */,
+				040B96271B92A0D200F5C9BC /* libsqlite3.dylib */,
 			);
 			sourceTree = "<group>";
 		};
