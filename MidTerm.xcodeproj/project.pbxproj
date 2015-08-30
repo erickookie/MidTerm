@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040B96251B9293C200F5C9BC /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B96241B9293C200F5C9BC /* DBManager.m */; };
 		044EDB671B90B2B800D8B6C0 /* newsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044EDB661B90B2B800D8B6C0 /* newsDetailViewController.m */; };
 		044EDB6E1B911D6C00D8B6C0 /* NewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044EDB6D1B911D6C00D8B6C0 /* NewsWebViewController.m */; };
 		04C391761B8E9D3B006D2F50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391751B8E9D3B006D2F50 /* main.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040B96231B9293B200F5C9BC /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		040B96241B9293C200F5C9BC /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		044EDB651B90B2AC00D8B6C0 /* newsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = newsDetailViewController.h; sourceTree = "<group>"; };
 		044EDB661B90B2B800D8B6C0 /* newsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsDetailViewController.m; sourceTree = "<group>"; };
 		044EDB6C1B911D5A00D8B6C0 /* NewsWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsWebViewController.h; sourceTree = "<group>"; };
@@ -92,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040B96221B9292FF00F5C9BC /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				040B96231B9293B200F5C9BC /* DBManager.h */,
+				040B96241B9293C200F5C9BC /* DBManager.m */,
+			);
+			name = DBManager;
+			sourceTree = "<group>";
+		};
 		044EDB621B90B25700D8B6C0 /* News Feed scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,7 @@
 		04C391721B8E9D3B006D2F50 /* MidTerm */ = {
 			isa = PBXGroup;
 			children = (
+				040B96221B9292FF00F5C9BC /* DBManager */,
 				04C391A61B8EB967006D2F50 /* Connection */,
 				04C391A81B8EB97A006D2F50 /* Parsing */,
 				04C391A71B8EB971006D2F50 /* Model Class */,
@@ -337,6 +350,7 @@
 				044EDB671B90B2B800D8B6C0 /* newsDetailViewController.m in Sources */,
 				04E658031B8F71DB0037E92C /* XMLParson.m in Sources */,
 				04C391791B8E9D3B006D2F50 /* AppDelegate.m in Sources */,
+				040B96251B9293C200F5C9BC /* DBManager.m in Sources */,
 				04E6580C1B8FDF1A0037E92C /* Session.m in Sources */,
 				04C3917F1B8E9D3B006D2F50 /* ViewController.m in Sources */,
 				04C391761B8E9D3B006D2F50 /* main.m in Sources */,
