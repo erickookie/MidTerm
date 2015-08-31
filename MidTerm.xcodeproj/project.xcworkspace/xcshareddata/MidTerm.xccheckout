@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>2BFA3AB7-6400-497A-960B-AFA966C898A3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>MidTerm</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>AB472B02D987319AA0D5FBCA4603D8E66AC6A50C</key>
 		<string>https://github.com/erickookie/MidTerm.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MidTerm.xcodeproj/project.xcworkspace</string>
+	<string>MidTerm.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AB472B02D987319AA0D5FBCA4603D8E66AC6A50C</key>

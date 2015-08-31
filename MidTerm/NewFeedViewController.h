@@ -17,7 +17,11 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@property(strong,nonatomic) NSMutableArray * newsArray;
+@property (strong, nonatomic)UIImageView *onButtonView;
+@property BOOL changeimagetype;
+@property (strong, nonatomic) UIButton *mimageButton;
+
+@property (strong,nonatomic) NSMutableArray * newsArray;
 
 @property (strong, nonatomic) NSMutableArray * SelectFromDBArray;
 

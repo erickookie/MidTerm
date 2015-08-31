@@ -12,6 +12,8 @@
 		040B96291B92A0D200F5C9BC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B96271B92A0D200F5C9BC /* libsqlite3.dylib */; };
 		044EDB671B90B2B800D8B6C0 /* newsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044EDB661B90B2B800D8B6C0 /* newsDetailViewController.m */; };
 		044EDB6E1B911D6C00D8B6C0 /* NewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044EDB6D1B911D6C00D8B6C0 /* NewsWebViewController.m */; };
+		04B13AFE1B9309C200415055 /* PaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B13AFD1B9309C200415055 /* PaintView.m */; };
+		04B13B391B93ADDF00415055 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B13B381B93ADDF00415055 /* CoreGraphics.framework */; };
 		04C391761B8E9D3B006D2F50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391751B8E9D3B006D2F50 /* main.m */; };
 		04C391791B8E9D3B006D2F50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391781B8E9D3B006D2F50 /* AppDelegate.m */; };
 		04C3917C1B8E9D3B006D2F50 /* MidTerm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C3917A1B8E9D3B006D2F50 /* MidTerm.xcdatamodeld */; };
@@ -49,6 +51,9 @@
 		044EDB661B90B2B800D8B6C0 /* newsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsDetailViewController.m; sourceTree = "<group>"; };
 		044EDB6C1B911D5A00D8B6C0 /* NewsWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsWebViewController.h; sourceTree = "<group>"; };
 		044EDB6D1B911D6C00D8B6C0 /* NewsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsWebViewController.m; sourceTree = "<group>"; };
+		04B13AFC1B9309C200415055 /* PaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintView.h; sourceTree = "<group>"; };
+		04B13AFD1B9309C200415055 /* PaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintView.m; sourceTree = "<group>"; };
+		04B13B381B93ADDF00415055 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		04C391701B8E9D3B006D2F50 /* MidTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C391741B8E9D3B006D2F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C391751B8E9D3B006D2F50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B13B391B93ADDF00415055 /* CoreGraphics.framework in Frameworks */,
 				040B96281B92A0D200F5C9BC /* libsqlite3.0.dylib in Frameworks */,
 				040B96291B92A0D200F5C9BC /* libsqlite3.dylib in Frameworks */,
 			);
@@ -137,6 +143,8 @@
 			children = (
 				04C3919C1B8EA62A006D2F50 /* DrawLinesViewController.h */,
 				04C3919D1B8EA62A006D2F50 /* DrawLinesViewController.m */,
+				04B13AFC1B9309C200415055 /* PaintView.h */,
+				04B13AFD1B9309C200415055 /* PaintView.m */,
 			);
 			name = "Draw Lines Canvas scenes";
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 				04C391721B8E9D3B006D2F50 /* MidTerm */,
 				04C3918F1B8E9D3B006D2F50 /* MidTermTests */,
 				04C391711B8E9D3B006D2F50 /* Products */,
+				04B13B381B93ADDF00415055 /* CoreGraphics.framework */,
 				040B96261B92A0D200F5C9BC /* libsqlite3.0.dylib */,
 				040B96271B92A0D200F5C9BC /* libsqlite3.dylib */,
 			);
@@ -362,6 +371,7 @@
 				04E6580C1B8FDF1A0037E92C /* Session.m in Sources */,
 				04C3917F1B8E9D3B006D2F50 /* ViewController.m in Sources */,
 				04C391761B8E9D3B006D2F50 /* main.m in Sources */,
+				04B13AFE1B9309C200415055 /* PaintView.m in Sources */,
 				044EDB6E1B911D6C00D8B6C0 /* NewsWebViewController.m in Sources */,
 				04E658001B8F60ED0037E92C /* Connection.m in Sources */,
 			);

@@ -20,7 +20,7 @@
 
 @implementation NewFeedViewController
 
-
+#pragma mark - View Did Load
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -135,8 +135,32 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-//    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",NewsRow.TitleNew,NewsRow.DescriptionsNew];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",NewsRow.TitleNew];
+    self.mimageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.mimageButton.frame=CGRectMake(0, 0, 50, 50);
+    self.mimageButton.tag = 1;
+    
+    self.onButtonView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    self.onButtonView.tag = 2;
+    self.onButtonView.image = [UIImage imageNamed:@"iconUnselected.png"];
+    [self.mimageButton setBackgroundImage:[self.onButtonView.image stretchableImageWithLeftCapWidth:0.0 topCapHeight:0.0] forState:UIControlStateNormal];
+    [cell.contentView addSubview:self.mimageButton];
+    [self.mimageButton addTarget:self action:@selector(changeMapType:) forControlEvents: UIControlEventTouchUpInside];
+    
+    UILabel* newsLabelText = [[UILabel alloc] init];
+    newsLabelText.text = [NSString stringWithFormat:@"%@",NewsRow.TitleNew];
+    
+    
+    
+    CGRect labelFrame = CGRectInset(cell.contentView.bounds, 50, 10);
+    labelFrame.size.width = cell.contentView.bounds.size.width / 2.0f;
+    newsLabelText.font = [UIFont boldSystemFontOfSize:17.0f];
+    newsLabelText.frame = labelFrame;
+    newsLabelText.backgroundColor = [UIColor clearColor];
+    cell.accessibilityLabel = [NSString stringWithFormat:@"%@",NewsRow.TitleNew];
+    [cell.contentView addSubview:newsLabelText];
+    
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@",NewsRow.TitleNew];
+    
     return cell;
 }
 
@@ -154,6 +178,36 @@
         newsDetailViewController.newsInformation=element;
 //        NSLog(@"Current New -> %@",element.TitleNew );
     }
+}
+
+-(void) switchChanged:(id)sender {
+    UISwitch* switcher = (UISwitch*)sender;
+    BOOL value = switcher.on;
+    // Store the value and/or respond appropriately
+}
+
+-(void)changeMapType:(id)sender
+{
+    self.changeimagetype = !self.changeimagetype;
+    
+    if(self.changeimagetype == YES)
+    {
+        NSLog(@"Toggle Button Pressed -  Unselected");
+        //[typechange setImage:[UIImage imageNamed:@"map.png"] forState:UIControlStateNormal];
+        //self.myGreatMapView.mapType = MKMapTypeStandard;
+        self.onButtonView.image = [UIImage imageNamed:@"iconUnselected.png"];
+        [self.mimageButton setImage:self.onButtonView.image forState:UIControlStateNormal];
+        //someBarButtonItem.image = [UIImage imageNamed:@"alarm_ON..png"];
+        //changeimagetype =NO;
+    }
+    else
+    {
+        NSLog(@"Toogle Button Pressed - Selected");
+        //self.myGreatMapView.mapType = MKMapTypeSatellite;
+        self.onButtonView.image = [UIImage imageNamed:@"iconSelected.png"];
+        [self.mimageButton setImage:self.onButtonView.image forState:UIControlStateNormal];
+    }
+    
 }
 
 @end

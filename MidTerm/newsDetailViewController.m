@@ -11,7 +11,9 @@
 
 @implementation newsDetailViewController
 
-#pragma mark - viewDidLoad
+#pragma mark - View Did load
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,6 +28,8 @@
     NSLog(@" *******  Working with the URL *******");
     NSLog(@" News Title ->%@", self.newsInformation.TitleNew);
     
+#pragma  mark Clear the XML Parse
+#pragma mark Clear the URL for the web view
 // Clean the URL to open the WebView with the URL
     NSString * ClearURL = self.newsInformation.urlNew;
     //NSLog(@"FULL URL -> %@", ClearURL);
@@ -33,7 +37,8 @@
     //NSLog(@"Clean URL -> %@", [urlList objectAtIndex:1]);
     NSString * CleanURL = [urlList objectAtIndex:1];
 //    _urlNewLabel.text = CleanURL;
-    
+  
+#pragma mark Clear the Description
 //Clean the Description Element to get just the Description Text
     NSString * getDescription = self.newsInformation.DescriptionsNew;
     //NSLog(@"Full Description -> %@", getDescription);
@@ -41,7 +46,8 @@
     descriptionText = [[descriptionText objectAtIndex:2] componentsSeparatedByString:@"<b>...</b>"];
     NSLog(@"Clean Description ->%@", [descriptionText objectAtIndex:0]);
     _descriptionNewsLabel.text = [descriptionText objectAtIndex:0];
-    
+
+#pragma mark Clear the Image URL
 //Clean the Description element to get Clean Image URL
     NSString * getURLfromDescription = self.newsInformation.DescriptionsNew;
     NSArray * urlImage = [getURLfromDescription componentsSeparatedByString:@"img src=\""];
@@ -55,7 +61,8 @@
     NSLog(@"Clean Image URL->%@", url);
     NSData * imageData = [NSData dataWithContentsOfURL:url];
     self.imageNewURL.image=[[UIImage alloc]initWithData:imageData];
-    
+
+#pragma mark Clear the Original URL
 //Clean description to the the Original URL Web Site
     NSString * urlSite = self.newsInformation.DescriptionsNew;
 //    NSLog(@"Full Description ->%@", self.newsInformation.DescriptionsNew);
@@ -77,6 +84,7 @@
     NSLog(@"News Details Segue ended");
 }
 
+#pragma mark - didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

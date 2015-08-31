@@ -15,7 +15,7 @@
 @implementation DBManager
 
 
-
+#pragma mark - DB Connection
 - (void) connectionDB
 {
     NSLog(@"This is the connection to the DataBase");
@@ -54,6 +54,9 @@
     }
 }
 
+#pragma mark - Querys
+
+#pragma mark Inster Query
 - (void) insertQuery : (NSString *) StringQuery;
 {
     NSLog(@"%@", StringQuery);
@@ -98,6 +101,7 @@
     }
 }
 
+#pragma mark Select Query
 - (void) selectQuery : (NSString *) StringQuery;
 {
     NSLog(@"%@", StringQuery);
@@ -162,6 +166,7 @@
     }
 }
 
+#pragma mark Delet Query
 - (void) deleteQuery : (NSString *) StringQuery;
 {
     NSLog(@"%@", StringQuery);
