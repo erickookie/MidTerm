@@ -13,9 +13,9 @@
 
 
 @property (strong, nonatomic) IBOutlet UIImageView *urlNewsImageView;
-@property (strong, nonatomic) IBOutlet UILabel *titleNewsLabel;
-@property (strong, nonatomic) IBOutlet UILabel *descriptionNewsLabel;
-@property (strong, nonatomic) IBOutlet UILabel *urlNewLabel;
+@property (strong, nonatomic) IBOutlet UILabel     *titleNewsLabel;
+@property (strong, nonatomic) IBOutlet UILabel     *descriptionNewsLabel;
+@property (strong, nonatomic) IBOutlet UILabel     *urlNewLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *imageNewURL;
 
 @property (nonatomic, strong) News * newsInformation;

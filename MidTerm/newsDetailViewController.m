@@ -29,35 +29,41 @@
     NSLog(@" News Title ->%@", self.newsInformation.TitleNew);
     
 #pragma  mark Clear the XML Parse
+    
 #pragma mark Clear the URL for the web view
-// Clean the URL to open the WebView with the URL
-    NSString * ClearURL = self.newsInformation.urlNew;
-    //NSLog(@"FULL URL -> %@", ClearURL);
-    NSArray *urlList = [ClearURL componentsSeparatedByString:@"="];
-    //NSLog(@"Clean URL -> %@", [urlList objectAtIndex:1]);
-    NSString * CleanURL = [urlList objectAtIndex:1];
-//    _urlNewLabel.text = CleanURL;
+//// Clean the URL to open the WebView with the URL
+//    NSString * ClearURL = self.newsInformation.urlNew;
+//    //NSLog(@"FULL URL -> %@", ClearURL);
+//    NSArray *urlList = [ClearURL componentsSeparatedByString:@"="];
+//    //NSLog(@"Clean URL -> %@", [urlList objectAtIndex:1]);
+//    NSString * CleanURL = [urlList objectAtIndex:1];
+////    _urlNewLabel.text = CleanURL;
   
 #pragma mark Clear the Description
 //Clean the Description Element to get just the Description Text
     NSString * getDescription = self.newsInformation.DescriptionsNew;
-    //NSLog(@"Full Description -> %@", getDescription);
-    NSArray * descriptionText = [getDescription componentsSeparatedByString:@"<font size=\"-1\">"];
-    descriptionText = [[descriptionText objectAtIndex:2] componentsSeparatedByString:@"<b>...</b>"];
-    NSLog(@"Clean Description ->%@", [descriptionText objectAtIndex:0]);
-    _descriptionNewsLabel.text = [descriptionText objectAtIndex:0];
+//    //NSLog(@"Full Description -> %@", getDescription);
+//    NSArray * descriptionText = [getDescription componentsSeparatedByString:@"<font size=\"-1\">"];
+//    descriptionText = [[descriptionText objectAtIndex:2] componentsSeparatedByString:@"<b>...</b>"];
+//    NSLog(@"Clean Description ->%@", [descriptionText objectAtIndex:0]);
+//    _descriptionNewsLabel.text = [descriptionText objectAtIndex:0];
+    
+    _descriptionNewsLabel.text = getDescription;
 
 #pragma mark Clear the Image URL
 //Clean the Description element to get Clean Image URL
     NSString * getURLfromDescription = self.newsInformation.DescriptionsNew;
-    NSArray * urlImage = [getURLfromDescription componentsSeparatedByString:@"img src=\""];
-    //NSLog(@"Half Clean Array ->%@", [urlImage objectAtIndex:1]);
-    urlImage = [[urlImage objectAtIndex:1] componentsSeparatedByString:@"\" alt="];
-    //NSLog(@"Another Half Clean Array ->%@", [urlImage objectAtIndex:0]);
-    NSString * urlArtWork = [urlImage objectAtIndex:0];
-    NSString * httpString = @"http:";
-    urlArtWork = [httpString stringByAppendingString:urlArtWork];
-    NSURL * url = [NSURL URLWithString:urlArtWork];
+//    NSArray * urlImage = [getURLfromDescription componentsSeparatedByString:@"img src=\""];
+//    //NSLog(@"Half Clean Array ->%@", [urlImage objectAtIndex:1]);
+//    urlImage = [[urlImage objectAtIndex:1] componentsSeparatedByString:@"\" alt="];
+//    //NSLog(@"Another Half Clean Array ->%@", [urlImage objectAtIndex:0]);
+//    NSString * urlArtWork = [urlImage objectAtIndex:0];
+//    NSString * httpString = @"http:";
+//    urlArtWork = [httpString stringByAppendingString:urlArtWork];
+    
+    
+    NSLog(@"%@", self.newsInformation.urlArtWork);
+    NSURL * url = [NSURL URLWithString:self.newsInformation.urlArtWork];
     NSLog(@"Clean Image URL->%@", url);
     NSData * imageData = [NSData dataWithContentsOfURL:url];
     self.imageNewURL.image=[[UIImage alloc]initWithData:imageData];
@@ -65,15 +71,16 @@
 #pragma mark Clear the Original URL
 //Clean description to the the Original URL Web Site
     NSString * urlSite = self.newsInformation.DescriptionsNew;
-//    NSLog(@"Full Description ->%@", self.newsInformation.DescriptionsNew);
-    NSArray * cleanURLSite = [urlSite componentsSeparatedByString:@"url="];
-    cleanURLSite = [[cleanURLSite objectAtIndex:1] componentsSeparatedByString:@"\"><img src"];
-    NSLog(@"Clean Original Site ->%@", [cleanURLSite objectAtIndex:0]);
-    _urlNewLabel.text = [cleanURLSite objectAtIndex:0];
+////    NSLog(@"Full Description ->%@", self.newsInformation.DescriptionsNew);
+//    NSArray * cleanURLSite = [urlSite componentsSeparatedByString:@"url="];
+//    cleanURLSite = [[cleanURLSite objectAtIndex:1] componentsSeparatedByString:@"\"><img src"];
+//    NSLog(@"Clean Original Site ->%@", [cleanURLSite objectAtIndex:0]);
+//    _urlNewLabel.text = [cleanURLSite objectAtIndex:0];
+//    self.newsCleanURL = [[NSMutableArray alloc] init];
+//    self.newsCleanURL = [cleanURLSite objectAtIndex:0];
     
-    self.newsCleanURL = [[NSMutableArray alloc] init];
-    
-    self.newsCleanURL = [cleanURLSite objectAtIndex:0];
+    _urlNewLabel.text = self.newsInformation.urlNew;
+    self.newsCleanURL = self.newsInformation.urlNew;
     
     NSLog(@" *******  Working with the URL *******");
     

@@ -26,8 +26,13 @@
 @property (nonatomic, strong) NSMutableArray * selectQueryArray;
 
 - (void) connectionDB;
-- (void) insertQuery : (NSString *) StringQuery;;
-- (void) selectQuery : (NSString *) StringQuery;;
-- (void) deleteQuery : (NSString *) StringQuery;;
+- (void) insertQuery : (NSString *) StringQuery;
+- (void) selectQuery : (NSString *) StringQuery;
+- (void) deleteQuery : (NSString *) StringQuery;
+
+-(void) insertQueryWithParamaters : (NSString *) titleNew : (NSString *) descNew : (NSString *) imageURL : (NSString *) origiginalLink;
+- (void) selectQueryWithParamaters : (NSString *) titleNew;
+- (void) deleteQueryWithParamaters : (NSString *) titleNew;
+- (NSMutableArray *) selectQueryForTableView : (NSString *) titleNew;
 
 @end

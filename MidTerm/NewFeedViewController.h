@@ -16,6 +16,7 @@
 @interface NewFeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView2;
 
 @property (strong, nonatomic)UIImageView *onButtonView;
 @property BOOL changeimagetype;
