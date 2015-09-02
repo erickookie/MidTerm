@@ -1,20 +1,20 @@
 //
-//  JSONParsing.m
+//  JSONParsingGDC.m
 //  MidTerm
 //
-//  Created by MCS on 8/27/15.
+//  Created by MCS on 8/31/15.
 //  Copyright (c) 2015 MCS. All rights reserved.
 //
 
-#import "JSONParsing.h"
+#import "JSONParsingGDC.h"
 
-@interface JSONParsing ()
+@interface JSONParsingGDC ()
 
 @property (nonatomic, strong) NSData *jsonData;
 
 @end
 
-@implementation JSONParsing
+@implementation JSONParsingGDC
 
 - (instancetype)initWithData: (NSData *) jsonData
 {
@@ -48,7 +48,7 @@
     
     if (!error)
     {
-        [self.delegate JSONParsing:self didFinishParsingWithResult:resultDictionary];
+        [self.delegate JSONParsingGDC:self didFinishParsingWithResult:resultDictionary];
     }
     else NSLog(@"Error in smomething");
     NSLog(@"JSONParsing Ended");

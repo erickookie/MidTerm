@@ -15,9 +15,12 @@
 @property (nonatomic, strong) NSString * urlWebView;
 
 
+
 @property (nonatomic, strong) NSString * TitleNew;
 @property (nonatomic, strong) NSString * DescriptionsNew;
 @property (nonatomic, strong) NSString * urlNew;
 @property (nonatomic, strong) NSString * urlImage;
+
+@property(nonatomic) BOOL toogleStatus;
 
 @end

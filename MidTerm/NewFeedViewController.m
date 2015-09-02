@@ -90,6 +90,7 @@
                newElement.TitleNew = TitleNew;
         newElement.DescriptionsNew = DescriptionNew;
                  newElement.urlNew = urlNew;
+           newElement.toogleStatus = NO;
         
 //        NSLog(@"News Title -> %@", newElement.TitleNew);
         //NSLog(@"Desc News  -> %@", newElement.DescriptionsNew);
@@ -108,7 +109,6 @@
 //    
 //    NSLog(@"End of the Dictionary Parsing");
 //}
-
 
 #pragma mark - TableView
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
@@ -135,21 +135,25 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    self.mimageButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.mimageButton.frame=CGRectMake(0, 0, 50, 50);
-    self.mimageButton.tag = 1;
+    UIButton *mimageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    mimageButton.frame=CGRectMake(0, 0, 50, 50);
+    mimageButton.tag = indexPath.row;
+    // self.mimageButton.backgroundColor = [UIColor redColor];
+    // [self.mimageButton addTarget:self action:@selector(favoriteButton:) forControlEvents: UIControlEventTouchUpInside];
     
-    self.onButtonView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    self.onButtonView.tag = 2;
-    self.onButtonView.image = [UIImage imageNamed:@"iconUnselected.png"];
-    [self.mimageButton setBackgroundImage:[self.onButtonView.image stretchableImageWithLeftCapWidth:0.0 topCapHeight:0.0] forState:UIControlStateNormal];
-    [cell.contentView addSubview:self.mimageButton];
-    [self.mimageButton addTarget:self action:@selector(changeMapType:) forControlEvents: UIControlEventTouchUpInside];
+    
+    UIImageView *onButtonView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    onButtonView.tag = 100;
+    onButtonView.image = [UIImage imageNamed:@"iconUnselected.png"];
+    [mimageButton setBackgroundImage:[onButtonView.image stretchableImageWithLeftCapWidth:0.0 topCapHeight:0.0] forState:UIControlStateNormal];
+
+    [cell.contentView addSubview:mimageButton];
+    [mimageButton addTarget:self action:@selector(changeMapType:) forControlEvents: UIControlEventTouchUpInside];
+    
+    
     
     UILabel* newsLabelText = [[UILabel alloc] init];
     newsLabelText.text = [NSString stringWithFormat:@"%@",NewsRow.TitleNew];
-    
-    
     
     CGRect labelFrame = CGRectInset(cell.contentView.bounds, 50, 10);
     labelFrame.size.width = cell.contentView.bounds.size.width / 2.0f;
@@ -162,6 +166,11 @@
 //    cell.textLabel.text = [NSString stringWithFormat:@"%@",NewsRow.TitleNew];
     
     return cell;
+}
+
+-(IBAction)favoriteButton:(id)sender
+{
+    NSLog(@"CAGADERO");
 }
 
 #pragma mark - Prepare for segue method
@@ -180,32 +189,32 @@
     }
 }
 
--(void) switchChanged:(id)sender {
+-(void) switchChanged:(id)sender
+{
     UISwitch* switcher = (UISwitch*)sender;
     BOOL value = switcher.on;
+    NSLog(@"%@", value);
     // Store the value and/or respond appropriately
 }
 
 -(void)changeMapType:(id)sender
 {
+    UIButton *currentButton = ((UIImageView*)sender);
     self.changeimagetype = !self.changeimagetype;
     
     if(self.changeimagetype == YES)
     {
-        NSLog(@"Toggle Button Pressed -  Unselected");
-        //[typechange setImage:[UIImage imageNamed:@"map.png"] forState:UIControlStateNormal];
-        //self.myGreatMapView.mapType = MKMapTypeStandard;
-        self.onButtonView.image = [UIImage imageNamed:@"iconUnselected.png"];
-        [self.mimageButton setImage:self.onButtonView.image forState:UIControlStateNormal];
-        //someBarButtonItem.image = [UIImage imageNamed:@"alarm_ON..png"];
-        //changeimagetype =NO;
+        NSLog(@"Toggle Button Pressed -  Unselected tag:%ld", (long)currentButton.tag);
+        [currentButton setBackgroundImage:[UIImage imageNamed:@"iconUnselected.png"] forState:UIControlStateNormal];
+        
+        NSLog(@"BUtton will the information from DB");
     }
     else
     {
-        NSLog(@"Toogle Button Pressed - Selected");
-        //self.myGreatMapView.mapType = MKMapTypeSatellite;
-        self.onButtonView.image = [UIImage imageNamed:@"iconSelected.png"];
-        [self.mimageButton setImage:self.onButtonView.image forState:UIControlStateNormal];
+        NSLog(@"Toogle Button Pressed - Selected tag:%ld", (long)currentButton.tag);
+        [currentButton setBackgroundImage:[UIImage imageNamed:@"iconSelected.png"] forState:UIControlStateNormal];
+        
+        NSLog(@"Button will add information to DB");
     }
     
 }
