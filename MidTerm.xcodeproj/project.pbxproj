@@ -30,6 +30,8 @@
 		04C391A11B8EA704006D2F50 /* NewFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391A01B8EA704006D2F50 /* NewFeedViewController.m */; };
 		04C391A41B8EA765006D2F50 /* GDCImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C391A31B8EA765006D2F50 /* GDCImageViewController.m */; };
 		04CC6C561B94058B008A9E6B /* TouchTrackerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC6C551B94058B008A9E6B /* TouchTrackerView.m */; };
+		04D076A71B9FD8320040F455 /* DosXUnoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D076A51B9FD8320040F455 /* DosXUnoViewController.m */; };
+		04D076A81B9FD8320040F455 /* DosXUnoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D076A61B9FD8320040F455 /* DosXUnoViewController.xib */; };
 		04E658001B8F60ED0037E92C /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E657FF1B8F60ED0037E92C /* Connection.m */; };
 		04E658031B8F71DB0037E92C /* XMLParson.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E658021B8F71DB0037E92C /* XMLParson.m */; };
 		04E658061B8F72D20037E92C /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E658051B8F72D20037E92C /* News.m */; };
@@ -89,6 +91,9 @@
 		04C391A31B8EA765006D2F50 /* GDCImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDCImageViewController.m; sourceTree = "<group>"; };
 		04CC6C541B94058B008A9E6B /* TouchTrackerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchTrackerView.h; sourceTree = "<group>"; };
 		04CC6C551B94058B008A9E6B /* TouchTrackerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchTrackerView.m; sourceTree = "<group>"; };
+		04D076A41B9FD8320040F455 /* DosXUnoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DosXUnoViewController.h; sourceTree = "<group>"; };
+		04D076A51B9FD8320040F455 /* DosXUnoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DosXUnoViewController.m; sourceTree = "<group>"; };
+		04D076A61B9FD8320040F455 /* DosXUnoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DosXUnoViewController.xib; sourceTree = "<group>"; };
 		04E657FE1B8F60880037E92C /* Connection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		04E657FF1B8F60ED0037E92C /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
 		04E658011B8F71950037E92C /* XMLParson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLParson.h; sourceTree = "<group>"; };
@@ -224,6 +229,9 @@
 			children = (
 				04C391921B8E9D3B006D2F50 /* MidTermTests.m */,
 				04C391901B8E9D3B006D2F50 /* Supporting Files */,
+				04D076A41B9FD8320040F455 /* DosXUnoViewController.h */,
+				04D076A51B9FD8320040F455 /* DosXUnoViewController.m */,
+				04D076A61B9FD8320040F455 /* DosXUnoViewController.xib */,
 			);
 			path = MidTermTests;
 			sourceTree = "<group>";
@@ -373,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D076A81B9FD8320040F455 /* DosXUnoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C391931B8E9D3B006D2F50 /* MidTermTests.m in Sources */,
+				04D076A71B9FD8320040F455 /* DosXUnoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
